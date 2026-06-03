@@ -1,0 +1,17 @@
+{
+  "name": "sistema-evento-futbol",
+  "version": "1.0.0",
+  "description": "Plataforma web informativa para inauguración de campeonato de fútbol.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2",
+    "express-session": "^1.17.4",
+    "pdfkit": "^0.15.0"
+  }
+}

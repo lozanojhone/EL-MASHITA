@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción de Equipos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="register">
+  <header>
+    <nav>
+      <div class="brand"><a href="index.html">Gran Campeonato de Fútbol</a></div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="register.html">Inscripción</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-section">
+      <div class="section-intro">
+        <span class="eyebrow">Inscripción de Equipos</span>
+        <h1>Registra tu equipo para el campeonato</h1>
+        <p class="lead">Completa los datos del equipo, los 6 jugadores titulares, 2 suplentes, delegado y número de contacto. Luego presiona "Enviar Inscripción".</p>
+      </div>
+
+      <div class="split-grid">
+        <div class="card form-card">
+          <h2>Formulario de inscripción</h2>
+          <div id="registerMessage" class="toast hidden"></div>
+          <form id="registerForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="teamName">Nombre del equipo</label>
+                <input type="text" id="teamName" name="teamName" required>
+              </div>
+              <div class="field">
+                <label for="delegateName">Nombre del delegado</label>
+                <input type="text" id="delegateName" name="delegateName" required>
+              </div>
+              <div class="field">
+                <label for="contactNumber">Número de contacto</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+              </div>
+              <div class="field">
+                <label for="category">Categoría</label>
+                <select name="category" id="category">
+                  <option>Fútbol Masculino</option>
+                  <option>Fútbol Femenino</option>
+                </select>
+              </div>
+
+              <h3>Jugadores titulares</h3>
+              <div class="players-grid">
+                <div class="field"><label for="player1">Jugador titular 1</label><input type="text" id="player1" name="player1" required></div>
+                <div class="field"><label for="player2">Jugador titular 2</label><input type="text" id="player2" name="player2" required></div>
+                <div class="field"><label for="player3">Jugador titular 3</label><input type="text" id="player3" name="player3" required></div>
+                <div class="field"><label for="player4">Jugador titular 4</label><input type="text" id="player4" name="player4" required></div>
+                <div class="field"><label for="player5">Jugador titular 5</label><input type="text" id="player5" name="player5" required></div>
+                <div class="field"><label for="player6">Jugador titular 6</label><input type="text" id="player6" name="player6" required></div>
+              </div>
+
+              <h3>Jugadores suplentes</h3>
+              <div class="players-grid">
+                <div class="field"><label for="substitute1">Suplente 1</label><input type="text" id="substitute1" name="substitute1" required></div>
+                <div class="field"><label for="substitute2">Suplente 2</label><input type="text" id="substitute2" name="substitute2" required></div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar Inscripción</button>
+          </form>
+        </div>
+
+        <div class="card info-panel">
+          <h3>Información importante</h3>
+          <ul class="info-list">
+            <li>Ingresa todos los nombres completos con claridad.</li>
+            <li>El número de contacto debe ser válido para notificaciones.</li>
+            <li>El administrador revisará las inscripciones y podrá generar PDFs.</li>
+            <li>Los datos se guardan en tu navegador mediante localStorage.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© 2026 Gran Campeonato de Fútbol.</p>
+      <p>Registro de equipos sin base de datos externa y panel privado para administradores.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
