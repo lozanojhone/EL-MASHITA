@@ -1,0 +1,13 @@
+{
+  "name": "evento-futbol-informativo",
+  "version": "1.0.0",
+  "description": "Sistema Web Informativo para Evento de Fútbol con panel administrativo y almacenamiento local.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4",
+    "pdfkit": "^0.13.0"
+  }
+}

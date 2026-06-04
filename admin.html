@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Administrativo - Evento de Fútbol</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <div class="container admin-nav">
+      <a class="brand" href="index.html">Fútbol Inaugura</a>
+      <nav>
+        <a href="index.html">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin-container">
+    <section class="admin-card" id="login-panel">
+      <h2>Ingreso de administrador</h2>
+      <p>Accede con usuario y contraseña para revisar inscripciones.</p>
+      <form id="login-form" class="login-form">
+        <label>Usuario<input name="username" required /></label>
+        <label>Contraseña<input name="password" type="password" required /></label>
+        <button type="submit" class="button button-primary">Ingresar</button>
+      </form>
+      <p class="form-note">El panel administrativo está protegido para proteger los registros del evento.</p>
+    </section>
+
+    <section class="admin-card hidden" id="dashboard-panel">
+      <div class="dashboard-header">
+        <div>
+          <span class="eyebrow">Panel privado</span>
+          <h2>Administración de inscripciones</h2>
+        </div>
+        <button id="logout-button" class="button button-secondary">Cerrar sesión</button>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span>Total de equipos</span>
+          <strong id="team-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Buscar por nombre</span>
+          <input id="search-input" placeholder="Escribe el nombre del equipo" />
+        </div>
+      </div>
+
+      <div class="table-overflow">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Equipo</th>
+              <th>Delegado</th>
+              <th>Contacto</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="teams-body"></tbody>
+        </table>
+      </div>
+
+      <section class="admin-card hidden" id="team-detail">
+        <h3>Detalle de inscripción</h3>
+        <div id="detail-content"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="./assets/js/admin.js"></script>
+</body>
+</html>
