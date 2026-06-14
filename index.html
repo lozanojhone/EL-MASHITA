@@ -410,7 +410,7 @@ footer p{color:var(--t2);font-size:.82rem}
       </div>
       <div class="emg" id="heroGrid"><div class="em-empty">Cargando...</div></div>
     </div>
-    <div class="hubic">📍 <strong>CHUGURMAYO</strong> · Distrito Sorochuco · Provincia Cajamarca · <strong>¡Te esperamos!</strong></div>
+    <div class="hubic">📍 <strong>CHUGURMAYO</strong> · Distrito SOROCHUCO · Provincia CELENDIN . departamento CAJAMARCA · <strong>¡Te esperamos!</strong></div>
   </div>
   <div class="mus-wrap">
     <div class="mus-in">
@@ -429,7 +429,7 @@ footer p{color:var(--t2);font-size:.82rem}
   </div>
   <footer>
     <div class="ftit">Gran Inauguración · Grass Sintético El Mashita</div>
-    <div class="fplace">📍 CHUGURMAYO · Sorochuco · Cajamarca</div>
+    <div class="fplace">📍 CHUGURMAYO · Sorochuco · Celendin . Cajamarca</div>
     <p>Creado por &amp;ING Royer Lozano Quiliche # 906-308-439 ¡!</p>
   </footer>
 </div>
@@ -447,7 +447,7 @@ footer p{color:var(--t2);font-size:.82rem}
         <button class="tbtn" onclick="showTab('tfem',this)">⚽ Femenino</button>
         <button class="tbtn" onclick="showTab('tmast',this)">⚽ Master</button>
         <button class="tbtn" onclick="showTab('tmasc2',this)">⚽ Masculino</button>
-        <button class="tbtn" onclick="showTab('tcal',this)">📅 Calendario</button>
+        <button class="tbtn" onclick="showTab('tcal',this)">📅 Partidos Programados </button>
       </div>
       <div id="tmasc" class="tcont active">
         <h3 class="ctitle">Todos los Equipos Inscritos</h3>
@@ -605,7 +605,7 @@ footer p{color:var(--t2);font-size:.82rem}
       <div class="fg" style="margin-top:1rem"><label>Contraseña</label><input type="password" id="lPass" placeholder="Contraseña" onkeypress="if(event.key==='Enter')doLogin()"></div>
       <div class="lerr" id="lErr">⚠️ Usuario o contraseña incorrectos.</div>
       <button class="lbtn" onclick="doLogin()">Ingresar al Panel</button>
-      <p style="margin-top:1rem;font-size:.72rem;color:var(--t2);text-align:center">Usuario: <strong style="color:var(--v2)">admin</strong> · Contraseña: <strong style="color:var(--v2)">mashita2025</strong></p>
+      <p style="margin-top:1rem;font-size:.72rem;color:var(--t2);text-align:center">Usuario: <strong style="color:var(--v2)">Correo</strong> · Contraseña: <strong style="color:var(--v2)">Cargando datos</strong></p>
     </div>
   </div>
 
@@ -939,8 +939,8 @@ async function fsSetConfig(data){
 }
 
 // ─── IMÁGENES DEL SITIO (Hero / Banda) ─────────────────────────
-const DEFAULT_HERO_IMG  = 'https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1920&q=80';
-const DEFAULT_BANDA_IMG = 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80';
+const DEFAULT_HERO_IMG  = '...';
+const DEFAULT_BANDA_IMG = '...';
 function applySiteImages(cfg){
   const heroUrl  = (cfg && cfg.heroImg)  || DEFAULT_HERO_IMG;
   const bandaUrl = (cfg && cfg.bandaImg) || DEFAULT_BANDA_IMG;
@@ -1162,7 +1162,7 @@ function resetForm(){
 
 // ─── ADMIN LOGIN ───────────────────────────────────────────────
 function doLogin(){
-  if(document.getElementById('lUser').value==='admin'&&document.getElementById('lPass').value==='mashita2025'){
+  if(document.getElementById('lUser').value==='admin'&&document.getElementById('lPass').value==='lozano.pe'){
     admLoggedIn=true;
     document.getElementById('admLogin').style.display='none';
     document.getElementById('admPanel').style.display='block';
@@ -1813,7 +1813,7 @@ function buildCertificateDoc(f){
   doc.setFontSize(32);
   doc.text('CERTIFICADO DE RECONOCIMIENTO',C,52,{align:'center'});
   doc.setTextColor(225,235,225); doc.setFont('helvetica','normal'); doc.setFontSize(12);
-  doc.text('Campeonato de Futbol 2026 - Chugurmayo, Sorochuco, Cajamarca',C,64,{align:'center'});
+  doc.text('Campeonato de Futbol 2026 - Chugurmayo, Sorochuco, Celendin, Cajamarca',C,64,{align:'center'});
 
   // Cuerpo centrado y sin puntajes
   doc.setTextColor(245,197,24); doc.setFont('helvetica','bold'); doc.setFontSize(21);
@@ -1832,7 +1832,7 @@ function buildCertificateDoc(f){
   // Firma por defecto centrada
   doc.setDrawColor(245,197,24); doc.setLineWidth(.5); doc.line(92,174,205,174);
   doc.setTextColor(245,197,24); doc.setFont('helvetica','italic'); doc.setFontSize(18);
-  doc.text('Comite Organizador El Mashita',C,170,{align:'center'});
+  doc.text('El Mashita',C,170,{align:'center'});
   doc.setFont('helvetica','normal'); doc.setFontSize(10); doc.setTextColor(230,230,220);
   doc.text('Firma oficial del campeonato',C,182,{align:'center'});
 
